@@ -28,8 +28,22 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### Edit the interface_description.py with the IP address of the APIC
+You can use any editor you are familiar with.  I am using VIM.
+```
+vi interface_description.py 
+```
+Update the IP address in this section.  Do not change anything else in the file.
+```
+### Update this IP Address
+### Update this IP Address
+apic = '10.5.9.11'
+### Update this IP Address
+### Update this IP Address
+```
+
 ### Run the script
-```python interface_descriptions.py```
+```python interface_description.py```
 
 ### Output
 ```
