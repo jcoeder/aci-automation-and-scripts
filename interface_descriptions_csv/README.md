@@ -43,7 +43,9 @@ apic = '10.5.9.11'
 ```
 
 ### Update the CSV with the important data
-vi interfaces.csv
+
+`vi interfaces.csv`
+
 ```
 node,interface,description
 101,1/1,Testing123
