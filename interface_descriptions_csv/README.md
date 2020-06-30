@@ -19,7 +19,7 @@ pip3.7 install --upgrade wheel
 ```git clone https://github.com/jcoeder/aci-automation-and-scripts.git```
 
 ### Navigate to this directory
-```cd /aci-automation-and-scripts/interface_descriptions```
+```cd /aci-automation-and-scripts/interface_descriptions_csv```
 
 ### Create your virtual environment to run Python
 ```
@@ -42,14 +42,25 @@ apic = '10.5.9.11'
 ### Update this IP Address
 ```
 
+### Update the CSV with the important data
+vi interfaces.csv
+```
+node,interface,description
+101,1/1,Testing123
+101,1/2,TestingABC
+101,1/3,Testing456
+102,1/1,Working123
+102,1/2,WorkingABC
+```
 ### Run the script
 ```python interface_description.py```
 
 ### Output
 ```
-(venv) $ python interface_description.py 
+(venv) $ python interface_description_csv.py
 Password: 
-Node ID (Ex: 101): 102
-Interface ID (Ex: "1/1"): 1/44
-Interface Description: Testing1234
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
 <Response [200]>
