@@ -16,6 +16,7 @@ pip3.7 install --upgrade wheel
 ```
 
 ### Clone this repository
+You may have to install git if your system does not come with it.  `yum install git -y`
 ```git clone https://github.com/jcoeder/aci-automation-and-scripts.git```
 
 ### Navigate to this directory
@@ -41,6 +42,7 @@ apic = '10.5.9.11'
 ### Update this IP Address
 ### Update this IP Address
 ```
+Save and exit the file.
 
 ### Run the script
 ```python interface_description.py```
@@ -53,3 +55,5 @@ Node ID (Ex: 101): 102
 Interface ID (Ex: "1/1"): 1/44
 Interface Description: Testing1234
 <Response [200]>
+```
+A 200 status code indicates that the script was successful.
