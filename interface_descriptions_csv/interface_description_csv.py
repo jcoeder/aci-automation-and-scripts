@@ -45,7 +45,7 @@ def interface_format(interface_id):
     interface_split = []
     interface_split.append(interface_id.split('/'))
     interface_underscore = str(interface_split[0][0]) + '_' + str(interface_split[0][1])
-    return interface_underscore#
+    return interface_underscore
 
 def set_interface_description(session, apic, node_id, interface_id, interface_description):
     '''
