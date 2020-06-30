@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ### Edit the interface_description.py with the IP address of the APIC
 You can use any editor you are familiar with.  I am using VIM.
 ```
-vi interface_description.py 
+vi interface_description_csv.py
 ```
 Update the IP address in this section.  Do not change anything else in the file.
 ```
@@ -53,7 +53,7 @@ node,interface,description
 102,1/2,WorkingABC
 ```
 ### Run the script
-```python interface_description.py```
+```python interface_description_csv.py```
 
 ### Output
 ```
