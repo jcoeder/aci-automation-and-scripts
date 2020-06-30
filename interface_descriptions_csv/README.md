@@ -1,5 +1,5 @@
-# interface_descriptions
-Script to set Physical Interface Configuration Description in Cisco ACI
+# interface_descriptions_csv
+Script to set Physical Interface Configuration Description in Cisco ACI reading the data from a CSV
 
 ### Install Python3.7 CentOS7
 Make sure Python3.7 is installed on your system in one way or another.  Here is how you do it in CentOS7
