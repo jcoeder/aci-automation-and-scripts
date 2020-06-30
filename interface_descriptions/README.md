@@ -1,5 +1,5 @@
 # interface_descriptions
-Cisco ACI Automation and Scripts
+Script to set Physical Interface Configuration Description in Cisco ACI
 
 ### Install Python3.7 CentOS7
 Make sure Python3.7 is installed on your system in one way or another.  Here is how you do it in CentOS7
@@ -13,19 +13,20 @@ sudo make altinstall
 pip3.7 install virtualenv --user
 pip3.7 install --upgrade pip
 pip3.7 install --upgrade wheel
+```
 
 ### Clone this repository
-``` git clone https://github.com/jcoeder/aci-automation-and-scripts.git
+```git clone https://github.com/jcoeder/aci-automation-and-scripts.git```
 
 ### Navigate to this directory
-```
-cd /aci-automation-and-scripts/interface_descriptions
+```cd /aci-automation-and-scripts/interface_descriptions```
 
 ### Create your virtual environment to run Python
 ```
 python3.7 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+```
 
 ### Run the script
-python interface_descriptions.py
+```python interface_descriptions.py```
