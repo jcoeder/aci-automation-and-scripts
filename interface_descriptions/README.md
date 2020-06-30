@@ -16,8 +16,11 @@ pip3.7 install --upgrade wheel
 ```
 
 ### Clone this repository
-You may have to install git if your system does not come with it.  `yum install git -y`
-```git clone https://github.com/jcoeder/aci-automation-and-scripts.git```
+You may have to install git if your system does not come with it.
+
+`yum install git -y`
+
+`git clone https://github.com/jcoeder/aci-automation-and-scripts.git`
 
 ### Navigate to this directory
 ```cd /aci-automation-and-scripts/interface_descriptions```
