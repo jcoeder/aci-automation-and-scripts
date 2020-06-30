@@ -30,3 +30,12 @@ pip install -r requirements.txt
 
 ### Run the script
 ```python interface_descriptions.py```
+
+### Output
+```
+(venv) $ python interface_description.py 
+Password: 
+Node ID (Ex: 101): 102
+Interface ID (Ex: "1/1"): 1/44
+Interface Description: Testing1234
+<Response [200]>
