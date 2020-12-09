@@ -21,6 +21,11 @@ vlan_id = str(input('Ex: 1337: '))
 # Disable SSL Warnings
 urllib3.disable_warnings()
 
+epgs = {'EPG-NAME1': '1915',
+        'EPG-NAME2': '1935',
+        'EPG-NAME3': '1932',
+        'EPG-NAME4': '1931',
+       }
 
 def login():
     '''
@@ -31,6 +36,17 @@ def login():
     session = requests.Session()
     response = session.post(url, json=payload, verify=False)
     return session
+
+def add_vpc_to_epgs(session, apic=apic, epgs=epgs):
+    '''
+    Loop over the dictionary to do multiple EPGs at once
+    '''
+    for key, value in epgs.items():
+        url  = 'https://' + apic + '/api/node/mo/uni/tn-TENANT_NAME/ap-AP_NAME/epg-' + key +'.json'
+        json = {"fvRsPathAtt":{"attributes":{"encap":"vlan-" + value + "","instrImedcy":"immediate","tDn":"topology/pod-1/protpaths-201-202/pathep-[EPG_NAME]","status":"created"},"children":[]}}
+        response = session.post(url, json=json, verify=False)
+        print(response)
+
 
 def add_vpc_to_epg_1(session, apic=apic, epg_id=epg_id, vlan_id=vlan_id):
 	'''
@@ -69,6 +85,7 @@ def add_vpc_to_epg_4(session, apic=apic, epg_id=epg_id, vlan_id=vlan_id):
     print(response)
 			
 session = login()
+add_vpc_to_epgs(session, apic, epgs)
 add_vpc_to_epg_1(session, apic, epg_id, vlan_id)
 add_vpc_to_epg_2(session, apic, epg_id, vlan_id)
 add_vpc_to_epg_3(session, apic, epg_id, vlan_id)
