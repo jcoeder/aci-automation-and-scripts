@@ -8,7 +8,7 @@ import pprint
 
 username = 'admin'
 password = 'NotMyPassword'
-apic = '172.31.32.5'
+apic = '172.31.16.5'
 proto = 'https://'
 preamble = proto + apic
 tenant = 'HOME_LAB_TENANT'
@@ -96,6 +96,9 @@ def recreate_new_bd(session, apic, tenant, bds, old_bridge_domain, new_bridge_do
     response = session.post(url, json=payload, verify=False)
     #print(response.text)
     print('Recreating new bridge domain: ' + new_bridge_domain)
+    for child in old_bridge_domain_json['fvBD']['children']:
+        if 'fvSubnet' in child:
+            print('Subnet: ' + child['fvSubnet']['attributes']['ip'])
 
 
 def recreate_new_epg(session, apic, tenant, application_profile, epgs, old_epg, new_epg, old_bridge_domain, new_bridge_domain):
